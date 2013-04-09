@@ -1,0 +1,149 @@
+/** time inputs **/
+form {
+	float: left;
+	margin: 10px;
+}
+
+.clock input[type=text] {
+	border: 2px solid #bebebe;
+	color: #787a7e;
+	float: left;
+	font-size: 40px;
+	height: 80px;
+	margin-right: 15px;
+	outline: none;
+	text-align: center;
+	width: 70px;
+
+	-moz-box-shadow: inset 5px 0 5px #888;
+	-webkit-box-shadow: inset 5px 0 5px #888;
+	box-shadow: inset 2px 2px 4px rgba(68,68,68,0.4);
+
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.meridian_mask {
+	float: left;
+	height: 84px;
+	overflow: hidden;
+	width: 113px;
+
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+form input[type=checkbox] + label[for=meridian] {
+	background: transparent url('../img/button_meridian.png') no-repeat 0 0;
+	cursor: pointer;
+	display: block;
+	height: 84px;
+	text-indent: 100em;
+	width: 230px;
+
+	transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out; /** Chrome & Safari **/
+    -moz-transition: all 0.5s ease-in-out; /** Firefox **/
+    -o-transition: all 0.5s ease-in-out; /** Opera **/
+    -ms-transition: all 0.5s ease-in-out; /** IE **/
+
+	-moz-transform: translate(0, 0);
+	-o-transform: translate(0, 0);
+	-webkit-transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	transform: translate(0, 0);
+}
+
+form input[type=checkbox]:checked + label[for=meridian] {
+	/*background-position: -110px 0;*/
+	transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out; /** Chrome & Safari **/
+    -moz-transition: all 0.5s ease-in-out; /** Firefox **/
+    -ms-transition: all 0.5s ease-in-out; /** IE **/
+    -o-transition: all 0.5s ease-in-out; /** Opera **/
+
+	-moz-transform: translate(-113px, 0);
+	-o-transform: translate(-113px, 0);
+	-webkit-transform: translate(-113px, 0);
+	-ms-transform: translate(-113px, 0);
+	transform: translate(-113px, 0);
+}
+
+form input[type=checkbox] {
+	display: none;
+}
+
+.js_setclock {
+	background: transparent url('../img/clockpicker_shape.png') no-repeat 0 0;
+	height: 301px;
+	margin: 10px 10px 10px 10px;
+	position: relative;
+	width: 320px;
+}
+
+	.skin {
+		cursor: pointer;
+		overflow: hidden;
+		text-indent: 100em;
+	}
+	/*	hours*/
+	.handle_hours {
+		height: 140px;
+		left: 156px;
+		position: absolute;
+		top: 80px;
+		width: 8px;
+
+		-moz-transform: rotate(0deg);
+  		-webkit-transform: rotate(0deg);
+  		-o-transform: rotate(0deg);
+  		-ms-transform: rotate(0deg);
+  		transform: rotate(0deg);
+	}
+
+		.handle_hours .skin {
+			background-color: #990000;
+			height: 70px;
+			width: 100%;
+		}
+	/*	minutes */
+	.handle_minutes {
+		height: 210px;
+		left: 156px;
+		position: absolute;
+		top: 45px;
+		width: 8px;
+		
+		-moz-transform: rotate(90deg);
+  		-webkit-transform: rotate(90deg);
+  		-o-transform: rotate(90deg);
+  		-ms-transform: rotate(90deg);
+  		transform: rotate(90deg);
+	}
+		.handle_minutes .skin {
+			background-color: #006699;
+			height: 105px;
+			width: 100%;
+		}
+	/*	seconds	*/
+	.handle_seconds {
+		display: none;
+		height: 210px;
+		left: 158px;
+		position: absolute;
+		top: 45px;
+		width: 2px;
+		
+		-moz-transform: rotate(90deg);
+  		-webkit-transform: rotate(90deg);
+  		-o-transform: rotate(90deg);
+  		-ms-transform: rotate(90deg);
+  		transform: rotate(90deg);
+	}
+		.handle_seconds .skin {
+			background-color: #999;
+			height: 105px;
+			width: 100%;
+		}
